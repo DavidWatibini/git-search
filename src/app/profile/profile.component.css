@@ -1,5 +1,26 @@
 body {
-  background-image: url("https://files.realpython.com/media/git-github-python-intro-title.9d2f6d42869d.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+
+}
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+nav>ul>li {
+  display: inline-block;
+}
+nav>ul {
+  text-align: right;
+}
+nav ul li a {
+  padding: 18px;
+  margin-right: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  color:orange;
+}
+nav{
+  position: relative;
+  top: 60px;
 }

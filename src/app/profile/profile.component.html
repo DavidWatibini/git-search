@@ -1,29 +1,54 @@
 <body>
-  <nav>
-    <div class="container-fluid">
-      <div>
-        <ul>
-          <li><a class="navbar-brand" href="#">Home</a></li>
-          <li><a routerLink='/search' routerLinkActive='active'>Search Repository</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="form-group">
-  <form>
-    <input class="form-control" type="text" placeholder="Enter a GitHub username" name="username" [(ngModel)] ="username" (keyup)="searchUser()">
+  <div class="container-fluid">
+    <nav>
+      <ul>
+        <li><a class="navbar-brand" href="#">Home</a></li>
+        <li><a routerLink='/search' routerLinkActive='active'>Search Repository</a></li>
+      </ul>
+    </nav>
+  </div>
 
-    <div>
-      <img class="profile-img img-thumbnail" src="{{user.avatar_url}}">
-      <p style="font-weight:bold;">{{user.name}}</p>
-      <p>{{user.login}}</p>
-      <p>{{user.bio}}</p>
-      <p>{{user.location}}</p>
-      <p>{{user.email}}</p>
-      <hr>
-      <p>{{user.organisation}}<img src="{{user.organizations_url}}">
-   </div>
-  </form>
+  <div class="form-group">
+    <form>
+      <input class="form-control" type="text" placeholder="Enter a GitHub username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
+
+
+      <div>
+        <table>
+          <img class="profile-img img-thumbnail" src="{{user.avatar_url}}">
+          <tr>
+            <td>id</td>
+            <td>{{user.login}}</td>
+          </tr>
+          <tr>
+            <td>Username</td>
+            <td>{{user.name}}</td>
+          </tr>
+          <tr>
+            <td>No of followers</td>
+            <td>{{user.followers}}</td>
+          </tr>
+          <tr>
+            <td>No of following</td>
+            <td>{{user.following}}</td>
+          </tr>
+          <tr>
+            <td>Bio</td>
+            <td>{{user.bio}}</td>
+          </tr>
+          <tr>
+            <td>No of repositories</td>
+            <td>{{user.repos}}</td>
+          </tr>
+          <tr>
+            <td>Created on the</td>
+            <td>{{user.created_at}}</td>
+          </tr>
+        </table>
+
+
+      </div>
+    </form>
   </div>
 
 
