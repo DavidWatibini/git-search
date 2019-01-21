@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient}  from '@angular/common/http';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
+
 
 
 import {Repository} from './repository'
@@ -14,20 +15,21 @@ import {environment} from '../environments/environment'
 export class ProfileService {
   username:string;
 
-    constructor(private _http: HttpClient){
+    constructor(private http: HttpClient){
+      console.log('Github Service Ready...');
       this.username =  'watibini';
 
     }
-    getProfileInfo(){
-      return this._http.get("https://api.github.com/users/"+this.username)
-      .map(result=>result)
+    getUser(){
+      return this.http.get("https://api.github.com/users/"+this.username)
+      .pipe(map(result=>result))
 
     }
-    getProfileRepository(){
-      return this._http.get("https://api.github.com/users/"+this.username+'/repos')
-      .map(result=>result)
+    getRepository(){
+      return this.http.get("https://api.github.com/users/"+this.username)
+      .pipe(map(result=>result))
   }
-  updateProfile(username:string){
+  updateUser(username:string){
     this.username = username;
   }
-}
+  }
