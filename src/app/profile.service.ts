@@ -14,10 +14,11 @@ import {environment} from '../environments/environment'
 })
 export class ProfileService {
   username:string;
+  repository:string
 
     constructor(private http: HttpClient){
       console.log('Github Service Ready...');
-      this.username =  'watibini';
+      this.username = 'watibini';
 
     }
     getUser(){

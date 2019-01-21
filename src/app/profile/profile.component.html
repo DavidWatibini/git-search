@@ -10,7 +10,9 @@
     </div>
   </nav>
   <div class="form-group">
-    <input class="form-control" type="text" placeholder="Enter a GitHub username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
+  <form>
+      <input class="form-control" type="text" placeholder="Enter a GitHub username" name="username">
+  </form>
   </div>
 </body>
 <router-outlet></router-outlet>
