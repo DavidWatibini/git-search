@@ -10,10 +10,19 @@
 
   <div class="form-group">
     <form>
-      <input class="form-control" type="text" placeholder="Enter a GitHub username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
 
+<div class="container">
+<div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">@</span>
+    </div>
+    <div id="control">
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="username"  [(ngModel)]="username" (keyup)="searchUser()" aria-describedby="basic-addon1">
+    </div>
+  </div>
+  <div>
+</div>
 
-      <div>
         <table>
           <img class="profile-img img-thumbnail" src="{{user.avatar_url}}">
           <tr>
