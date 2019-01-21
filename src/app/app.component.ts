@@ -7,6 +7,4 @@ import {User} from './user';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'git-search';
-}
+export class AppComponent {}
