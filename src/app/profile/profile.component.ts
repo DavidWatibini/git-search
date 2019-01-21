@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
       this.user = user;
     })
     this.ProfileService.getRepository().subscribe(repository => {
-      //console.log(user);
+      
       this.repository = repository;
     })
   }
@@ -30,9 +30,9 @@ export class ProfileComponent implements OnInit {
      this.ProfileService.getUser().subscribe(user => {
        this.user = user;
      })
-     //console.log('It works');
+
      this.ProfileService.getRepository().subscribe(repository => {
-       //console.log(user);
+
        this.repository = repository;
      })
 
