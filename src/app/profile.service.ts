@@ -12,6 +12,22 @@ import {environment} from '../environments/environment'
   providedIn: 'root'
 })
 export class ProfileService {
+  username:string;
 
-  constructor() { }
+    constructor(private _http: HttpClient){
+      this.username =  'watibini';
+
+    }
+    getProfileInfo(){
+      return this._http.get("https://api.github.com/users/"+this.username)
+      .map(result=>result)
+
+    }
+    getProfileRepository(){
+      return this._http.get("https://api.github.com/users/"+this.username+'/repos')
+      .map(result=>result)
+  }
+  updateProfile(username:string){
+    this.username = username;
+  }
 }
