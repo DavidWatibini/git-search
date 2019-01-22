@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchComponent } from './search/search.component';
+import { CommentPipe } from './comment.pipe';
+import { ColorDirective } from './color.directive';
 
 
 const routes: Routes = [
@@ -21,7 +23,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ProfileComponent,
-    SearchComponent
+    SearchComponent,
+    CommentPipe,
+    ColorDirective
   ],
   imports: [
     BrowserModule,

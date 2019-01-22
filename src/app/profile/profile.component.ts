@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
       this.user = user;
     })
     this.ProfileService.getRepository().subscribe(repository => {
-    console.log(repository)
+    // console.log(repos)
       this.repository = repository;
     })
   }

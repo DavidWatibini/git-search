@@ -8,7 +8,9 @@ import {User} from '../user'
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
+  user:any=[];
+  repository:any=[];
+  username:string;
   constructor() { }
 
   ngOnInit() {
