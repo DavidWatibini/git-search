@@ -26,7 +26,7 @@ export class ProfileService {
 
     }
     getRepository(){
-      return this.http.get("https://api.github.com/users/"+this.username)
+      return this.http.get("https://api.github.com/users/"+this.username +'/repos')
       .pipe(map(result=>result))
   }
   updateUser(username:string){

@@ -12,13 +12,15 @@ export class ProfileComponent implements OnInit {
   user:any=[];
   repository:any=[];
   username:string;
+
   constructor(private ProfileService: ProfileService) {
     this.ProfileService.getUser().subscribe(user => {
       console.log(user);
+
       this.user = user;
     })
     this.ProfileService.getRepository().subscribe(repository => {
-      
+    console.log(repository)
       this.repository = repository;
     })
   }

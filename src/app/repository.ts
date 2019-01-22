@@ -1,3 +1,3 @@
 export class Repository {
-    constructor(private access_token:string,){}
+    constructor(public name:string, public descrition:string, public watchers:number, public forks:number){}
 }
