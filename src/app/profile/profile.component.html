@@ -1,4 +1,5 @@
 <ng-progress></ng-progress>
+
 <body>
   <div class="container-fluid">
     <img src="http://stylus-lang.com/img/octocat.svg" alt="git image" id="img">
@@ -13,26 +14,24 @@
     </nav>
   </div>
 
-  <div class="form-group">
-    <form>
-
-      <div class="container">
+  <div class="container-fluid">
+    <div class="form-group">
+      <form>
         <p>Search a username</p>
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">@</span>
           </div>
           <div id="control">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="username" [(ngModel)]="username"  aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="username" [(ngModel)]="username" aria-describedby="basic-addon1">
           </div>
         </div>
         <div>
         </div>
-        <button class="btn btn-outline-primary btn-sm" name="username" (click)="searchUser()" > Search </button>
+        <button class="btn btn-outline-primary btn-sm" name="username" (click)="searchUser()"> Search </button>
         <br>
         <p>Search results </p>
         <img class="profile-img img-thumbnail" src="{{user.avatar_url}}">
-
         <table>
           <tr>
             <td>id</td>
@@ -65,10 +64,12 @@
         </table>
 
 
-      </div>
-    </form>
+
+      </form>
+    </div>
+
+
+
   </div>
-
-
 </body>
 <router-outlet></router-outlet>
