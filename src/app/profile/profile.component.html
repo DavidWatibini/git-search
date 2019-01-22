@@ -1,7 +1,7 @@
 <ng-progress></ng-progress>
 
 <body>
-  <div class="container-fluid">
+<div class="container-fluid">
     <img src="http://stylus-lang.com/img/octocat.svg" alt="git image" id="img">
     <h4 id="name">GITHUB SEARCH</h4>
     <h6><a href="https://github.com" target="_blank">SIGN UP</a></h6>
@@ -63,15 +63,10 @@
               <td>{{user.created_at}}</td>
             </tr>
           </table>
-
+    
           <br>
           <p id="repo"><a routerLink='/search' routerLinkActive='active'>Repositories</a></p>
-          <div *ngFor="let repo of repos">
-            {{public_repos.name}}
-            {{public_repos.language}}
-            {{public_repos.watchers}}
-            {{public_repos.fork}}
-          </div>
+
         </div>
 
       </form>
