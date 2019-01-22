@@ -26,6 +26,7 @@ nav ul li a {
   text-decoration: none;
   display: block;
   color:blue;
+  font-family: 'Fredericka the Great', cursive;
 }
 nav{
   position: relative;
@@ -38,6 +39,8 @@ form {
 }
 p{
   margin-left:20%;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 20px;
 }
 button{
   position: relative;
@@ -47,6 +50,7 @@ button{
 table{
   position: relative;
   top: 60%;
+  font-family: 'Love Ya Like A Sister', cursive;
 }
 #search{
   margin-right: 30%;
@@ -66,8 +70,25 @@ table>p{
   position: relative;
   top: 60px;
   margin-left: 45%;
+  font-family: 'Special Elite', cursive;
 }
 h6{
   position: relative;
   top: 20px;
+  font-family: 'Special Elite', cursive;
+}
+table{
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+ tr{
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+ td{
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
 }

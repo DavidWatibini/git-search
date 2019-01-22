@@ -30,9 +30,10 @@
         </div>
         <button class="btn btn-outline-primary btn-sm" name="username" (click)="searchUser()" > Search </button>
         <br>
+        <p>Search results </p>
+        <img class="profile-img img-thumbnail" src="{{user.avatar_url}}">
+
         <table>
-          <p>Search results </p>
-          <img class="profile-img img-thumbnail" src="{{user.avatar_url}}">
           <tr>
             <td>id</td>
             <td>{{user.login}}</td>
